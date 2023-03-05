@@ -1,0 +1,29 @@
+!% +language_name=finnish 
+
+! Inform 6-Tynkä
+
+! ääkköset
+Include "fialpha"; 
+
+Constant DEBUG; 
+
+Constant Story "[jutun nimi]";
+Constant Headline "^[jutun otsikko]^";
+  
+Include "Parser";
+Include "VerbLib";
+
+Object huone "[huone]"
+   with description
+      "[kuvaus]",
+   has light;
+
+[ Initialise;
+  location = huone;
+  "^^^[intro]^";
+];
+
+
+Include "finng"; 
+
+! uudet verbit tänne
